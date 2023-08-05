@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Data_Karyawan extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama','alamat','jabatan'];
+    protected $fillable = ['nama', 'alamat', 'jabatan'];
 
-    public function karyawan()
+    public function data_karyawan()
     {
-        return $this->belongsTo(Data_Karyawan::class);
+        return $this->hasMany(Data_Karyawan::class);
     }
 }

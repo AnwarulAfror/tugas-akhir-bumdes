@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Data_Karyawan;
+use App\Models\DataKaryawan;
 use Illuminate\Http\Request;
 
-class Data_karyawanController extends Controller
+class DataKaryawanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Data_Karyawan::all();
+        $data = DataKaryawan::all();
         return view('karyawan.index', compact('data'));
+        
     }
 
     /**
@@ -29,31 +30,21 @@ class Data_karyawanController extends Controller
      */
     public function store(Request $request)
     {
-        $data = Data_Karyawan::create([
-            'nama' => $request->nama,
-            'alamat' => $request->alamat,
-            'jabatan' => $request->jabatan,
-        ]);
-
-        if ($data) {
-            return redirect()->route('karyawan.index');
-        }
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($data)
+    public function show(DataKaryawan $dataKaryawan)
     {
-        $data = Data_Karyawan::findOrFail();
-
-        return response()->json($data);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Data_Karyawan $data_Karyawan)
+    public function edit(DataKaryawan $dataKaryawan)
     {
         //
     }
@@ -61,7 +52,7 @@ class Data_karyawanController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Data_Karyawan $data_Karyawan)
+    public function update(Request $request, DataKaryawan $dataKaryawan)
     {
         //
     }
@@ -69,7 +60,7 @@ class Data_karyawanController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Data_Karyawan $data_Karyawan)
+    public function destroy(DataKaryawan $dataKaryawan)
     {
         //
     }

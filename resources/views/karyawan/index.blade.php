@@ -2,7 +2,7 @@
 @section('content')
 <main id="main" class="main">
     <div class="pagetitle">
-        <h1>Kontak</h1>
+        <h1>Karyawan</h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item active">Karyawan</li>
@@ -10,6 +10,8 @@
         <div class="row">
             <div class="col-lg-12">
               <div class="modal fade" id="basicModal" tabindex="-1">
+                <form action="{{route('karyawan.store')}}" method="post">
+                @csrf
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -18,19 +20,25 @@
                     </div>
                     <div class="modal-body">
                       
-                  <div class="row mb-3">
-                    <label for="inputDate" class="col-sm-2 col-form-label">Tanggal</label>
-                    <div class="col-sm-10">
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                <!-- Advanced Form Elements -->
-                <div class="input-group mb-3">
-                  <label for="inputDate" class="col-sm-2 col-form-label">Jumlah</label>
-                  <span class="input-group-text">Rp</span>
-                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                  <span class="input-group-text">.00</span>
-                </div><!-- End General Form Elements -->
+                      <div class="modal-body">
+                        <div class="row mb-3">
+                          <label for="inputDate" class="col-sm-3 col-form-label">Nama</label>
+                          <div class="col-sm-9">
+                            <input type="text" name="nama" id="nama" class="form-control">
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label for="inputDate" class="col-sm-3 col-form-label">Alamat</label>
+                          <div class="col-sm-9">
+                            <input type="text" name="alamat" id="alamat" class="form-control">
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label for="inputDate" class="col-sm-3 col-form-label">Jabatan</label>
+                          <div class="col-sm-9">
+                            <input type="text" name="jabatan" id="jabatan" class="form-control">
+                          </div>
+                        </div><!-- End General Form Elements -->
                 <div class="input-group mb-3">
                   <label for="inputDate" class="col-sm-2 col-form-label">Pilih</label>
                   <select id="inputState" class="form-select">
@@ -45,6 +53,7 @@
                </div>
                  </div>
                 </div>
+              </form>
               </div>
               <div class="card">
                 <div class="card-body">
@@ -87,8 +96,6 @@
     
             </div>
           </div>
-        <nav>
-        </nav>
     </div>
 </main>
 @endsection
