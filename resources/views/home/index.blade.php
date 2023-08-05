@@ -123,7 +123,7 @@
               </div>
             </div>
             
-        <div class="col-lg-12">
+        {{-- <div class="col-lg-12">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Column Chart</h5>
@@ -188,7 +188,7 @@
 
             </div>
           </div>
-        </div>
+        </div> --}}
           </div>
         </div><!-- End Left side columns -->
       </div>

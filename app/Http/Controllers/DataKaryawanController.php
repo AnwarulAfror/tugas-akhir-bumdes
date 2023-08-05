@@ -30,7 +30,16 @@ class DataKaryawanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = DataKaryawan::create([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'jabatan' => $request->jabatan,
+        ]);
+
+        if ($data)
+        {
+            return redirect()->route('karyawan.index');
+        }
     }
 
     /**
