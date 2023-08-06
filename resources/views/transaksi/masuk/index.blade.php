@@ -124,9 +124,9 @@
       
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">Datatables</h5>
+                    <h5 class="card-title">Tambah Data Pemasukan</h5>
                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambah">
-                      Tambah Data
+                      Tambah Data Pemasukan
                     </button>
                     <!-- Table with stripped rows -->
                     <table class="table datatable">

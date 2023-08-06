@@ -13,12 +13,10 @@
         </ol>
       </nav>
     </div><!-- End Page Title -->
-    
     <section class="section">
-      <div class="row">
-              
+      <div class="row">  
              <!-- Basic Modal -->
-             <div class="modal fade" id="basicModal" tabindex="-1">
+            <div class="modal fade" id="basicModal" tabindex="-1">
               <form action="{{route('transaksi.store')}}" method="post">
                   @csrf
               <div class="modal-dialog">
@@ -112,12 +110,11 @@
             </div><!-- End Basic Modal-->
             <div class="row">
               <div class="col-lg-12">
-      
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">Datatables</h5>
+                    <h5 class="card-title">Tambah Data Pengeluaran</h5>
                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#basicModal">
-                      Tambah Data
+                      Tambah Data Pengeluaran
                     </button>
                     <!-- Table with stripped rows -->
                     <table class="table datatable">
@@ -149,10 +146,8 @@
                       </tbody>
                     </table>
                     <!-- End Table with stripped rows -->
-      
                   </div>
                 </div>
-      
               </div>
             </div>
       </div>
