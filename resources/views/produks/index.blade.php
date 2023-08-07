@@ -19,7 +19,7 @@
                       </div>
                         <div class="modal-body">
                           <div class="row mb-3">
-                            <label for="inputDate" class="col-sm-3 col-form-label">Nama</label>
+                            <label for="inputDate" class="col-sm-3 col-form-label">Nama Produk</label>
                               <div class="col-sm-9">
                                 <input type="text" name="nama_produk" class="form-control">
                               </div>
@@ -59,7 +59,7 @@
                       </div>
                         <div class="modal-body">
                           <div class="row mb-3">
-                            <label for="inputDate" class="col-sm-3 col-form-label">Nama</label>
+                            <label for="inputDate" class="col-sm-3 col-form-label">Nama Produk</label>
                               <div class="col-sm-9">
                                 <input type="text" name="nama_produk" id="nama_produk" class="form-control">
                               </div>
