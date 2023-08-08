@@ -9,7 +9,7 @@
             </ol>
             <div class="row mb-12">
               <div class="modal fade" id="basicModal" tabindex="-1">
-                <form action="{{ route('karyawan.store')}}" method="post">
+                <form action="{{ route('karyawan.index')}}" method="post">
                 @csrf
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -49,7 +49,7 @@
                 </form>
               </div>
               <div class="modal fade" id="edit" tabindex="-1">
-                <form action="{{ route('karyawan.show')}}" method="post">
+                <form action="{{ route('karyawan.index')}}" method="post">
                 @csrf
                   <div class="modal-dialog">
                     <div class="modal-content">

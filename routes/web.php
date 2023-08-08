@@ -3,10 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MitraController;
+use App\Http\Controllers\KontakController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\DataKaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/transaksi/store', [TransaksiController::class, 'index2'])->name('transaksi.store');
     Route::get('/transaksi/pengeluaran', [TransaksiController::class, 'index'])->name('transaksi.keluar');
     Route::post('/transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
-    Route::get('/karyawan/tables-data', [DataKaryawanController::class, 'index']);
+    Route::get('/karyawan/tables-data', [DataKaryawanController::class, 'index'])->name('karyawan.index');
     Route::get('/profil/users-profile', [ProfilController::class, 'index']);
     Route::get('/kontak/pages-contact', [KontakController::class, 'index']);
     Route::get('/mitra', [MitraController::class, 'index'])->name('mitra.index');
