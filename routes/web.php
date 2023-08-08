@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/transaksi/store', [TransaksiController::class, 'index2'])->name('transaksi.store');
     Route::get('/transaksi/pengeluaran', [TransaksiController::class, 'index'])->name('transaksi.keluar');
     Route::post('/transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
-    Route::get('/karyawan/tables-data', [Data_KaryawanController::class, 'index']);
+    Route::get('/karyawan/tables-data', [DataKaryawanController::class, 'index']);
     Route::get('/profil/users-profile', [ProfilController::class, 'index']);
     Route::get('/kontak/pages-contact', [KontakController::class, 'index']);
     Route::get('/mitra', [MitraController::class, 'index'])->name('mitra.index');
