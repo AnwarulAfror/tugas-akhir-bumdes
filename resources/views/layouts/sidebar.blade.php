@@ -67,5 +67,13 @@
       </li><!-- End Profile Page Nav -->
 
       <!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/kontak/pages-contact">
+          <i class="bi bi-envelope"></i>
+          <span>Kontak</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+      
     </ul>
   </aside>
