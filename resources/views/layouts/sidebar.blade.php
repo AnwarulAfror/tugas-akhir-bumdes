@@ -67,24 +67,5 @@
       </li><!-- End Profile Page Nav -->
 
       <!-- End F.A.Q Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="/kontak/pages-contact">
-          <i class="bi bi-envelope"></i>
-          <span>Kontak</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="/login">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="/register">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li>
     </ul>
   </aside>
