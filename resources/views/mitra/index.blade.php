@@ -10,7 +10,7 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="modal fade" id="tambah" tabindex="-1">
-                  <form action="{{route('mitra.show')}}" method="post">
+                  <form action="{{route('mitra.store')}}" method="post">
                     @csrf
                     <div class="modal-dialog">
                       <div class="modal-content">

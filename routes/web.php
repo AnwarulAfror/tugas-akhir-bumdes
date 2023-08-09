@@ -42,7 +42,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profil/users-profile', [ProfilController::class, 'index']);
     Route::get('/kontak/pages-contact', [KontakController::class, 'index']);
     Route::get('/mitra', [MitraController::class, 'index'])->name('mitra.index');
-    Route::post('/mitra', [MitraController::class, 'show'])->name('mitra.show');
+    Route::post('/mitra', [MitraController::class, 'store'])->name('mitra.store');
+    Route::get('/mitra/{id}', [MitraController::class, 'show'])->name('mitra.show');
+    Route::put('/mitra/{id}', [MitraController::class, 'update'])->name('mitra.update');
     Route::get('produks', [ProdukController::class, 'index'])->name('produk.index');
     Route::post('produks', [ProdukController::class, 'store'])->name('produk.store');
     Route::get('/charts-echarts', function () {
