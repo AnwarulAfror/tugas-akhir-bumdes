@@ -35,8 +35,9 @@
                               <label for="inputDate" class="col-sm-4 col-form-label">Jabatan</label>
                                 <select id="inputState" name="jabatan" class="form-select">
                                 <option selected>Pilih</option>
-                                <option value="bendahara">Bendahara</option>
                                 <option value="ketua">Ketua</option>
+                                <option value="wakil_ketua">Wakil Ketua</option>
+                                <option value="bendahara">Bendahara</option>
                               </select>
                             </div>
                         </div>
@@ -75,9 +76,9 @@
                               <label for="inputDate" class="col-sm-4 col-form-label">Jabatan</label>
                                 <select id="inputState" name="jabatan" id="jabatan" class="form-select">
                                 <option>Pilih</option>
-                                <option value="bendahara">ketua</option>
-                                <option value="ketua">Wakil Ketua</option>
-                                <option value="ketua">Bendahara</option>
+                                <option value="ketua">ketua</option>
+                                <option value="wakil_ketua">Wakil Ketua</option>
+                                <option value="bendahara">Bendahara</option>
                               </select>
                             </div>
                         </div>
