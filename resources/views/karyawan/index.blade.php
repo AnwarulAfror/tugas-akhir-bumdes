@@ -9,7 +9,7 @@
             </ol>
             <div class="row mb-12">
               <div class="modal fade" id="basicModal" tabindex="-1">
-                <form action="{{ route('karyawan.index')}}" method="post">
+                <form action="{{ route('karyawan.store')}}" method="post">
                 @csrf
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -41,15 +41,15 @@
                             </div>
                         </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Data</button>
                           </div>
                     </div>
                   </div>
                 </form>
               </div>
               <div class="modal fade" id="edit" tabindex="-1">
-                <form action="{{ route('karyawan.index')}}" method="post">
+                <form action="{{ route('karyawan.store')}}" method="post">
                 @csrf
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -75,14 +75,15 @@
                               <label for="inputDate" class="col-sm-4 col-form-label">Jabatan</label>
                                 <select id="inputState" name="jabatan" id="jabatan" class="form-select">
                                 <option>Pilih</option>
-                                <option value="bendahara">Bendahara</option>
-                                <option value="ketua">Ketua</option>
+                                <option value="bendahara">ketua</option>
+                                <option value="ketua">Wakil Ketua</option>
+                                <option value="ketua">Bendahara</option>
                               </select>
                             </div>
                         </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                           </div>
                     </div>
                   </div>
