@@ -57,7 +57,7 @@
                   </form>
                 </div>
                 <div class="modal fade" id="edit" tabindex="-1">
-                  <form action="" method="post">
+                  <form action="{{route('mitra.store')}}" method="post">
                     @csrf
                     <div class="modal-dialog">
                       <div class="modal-content">
