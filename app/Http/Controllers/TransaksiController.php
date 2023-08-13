@@ -96,17 +96,28 @@ class TransaksiController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Transaksi $transaksi)
+    public function edit($id)
     {
-        //
+        $data = Transaksi::findOrFail($id);
+        $mitra = Mitra::all();
+        return view('transaksi.keluar.edit', compact(['data', 'mitra']));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Transaksi $transaksi)
+    public function update(Request $request, $id)
     {
-        //
+        $data = Transaksi::findOrFail($id);
+        
+        $data->total_tagihan = $request->total_tagihan;
+        $data->nominal_bayar = $request->nominal_bayar;
+        $data->mitra_id = $request->mitra_id;
+        $data->keterangan = $request->keterangan;
+        
+        $data->update();
+        
+        return redirect()->route('transaksi.keluar');
     }
 
     /**

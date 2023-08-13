@@ -21,70 +21,35 @@
                           <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Nama</label>
                               <div class="col-sm-9">
-                                <input type="text" name="nama" class="form-control">
+                                <input type="text" name="nama" class="form-control" required>
                               </div>
                           </div>
                             <div class="row mb-3">
                               <label for="inputDate" class="col-sm-3 col-form-label">Alamat</label>
                                 <div class="col-sm-9">
-                                  <input type="text" name="alamat" class="form-control">
+                                  <input type="text" name="alamat" class="form-control" required>
                                 </div>
                             </div>
                             <!-- Advanced Form Elements --><!-- End General Form Elements -->
                             <div class="input-group mb-2">
                               <label for="inputDate" class="col-sm-4 col-form-label">Jabatan</label>
-                                <select id="inputState" name="jabatan" class="form-select">
+                                <select id="inputState" name="jabatan" class="form-select" required>
                                 <option selected>Pilih</option>
                                 <option value="ketua">Ketua</option>
                                 <option value="wakil_ketua">Wakil Ketua</option>
                                 <option value="bendahara">Bendahara</option>
                               </select>
                             </div>
+                            <div class="row mb-3">
+                              <label for="inputDate" class="col-sm-3 col-form-label">No Kontak</label>
+                                <div class="col-sm-9">
+                                  <input type="text" name="no_kontak" class="form-control" required>
+                                </div>
+                            </div>
                         </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             <button type="submit" class="btn btn-primary">Simpan Data</button>
-                          </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="modal fade" id="edit" tabindex="-1">
-                <form action="{{ route('karyawan.store')}}" method="post">
-                @csrf
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title">Edit Karyawan</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                        <div class="modal-body">
-                          <div class="row mb-3">
-                            <label for="inputDate" class="col-sm-3 col-form-label">Nama</label>
-                              <div class="col-sm-9">
-                                <input type="text" name="nama" id="nama" class="form-control">
-                              </div>
-                          </div>
-                            <div class="row mb-3">
-                              <label for="inputDate" class="col-sm-3 col-form-label">Alamat</label>
-                                <div class="col-sm-9">
-                                  <input type="text" name="alamat" id="alamat" class="form-control">
-                                </div>
-                            </div>
-                            <!-- Advanced Form Elements --><!-- End General Form Elements -->
-                            <div class="input-group mb-2">
-                              <label for="inputDate" class="col-sm-4 col-form-label">Jabatan</label>
-                                <select id="inputState" name="jabatan" id="jabatan" class="form-select">
-                                <option>Pilih</option>
-                                <option value="ketua">ketua</option>
-                                <option value="wakil_ketua">Wakil Ketua</option>
-                                <option value="bendahara">Bendahara</option>
-                              </select>
-                            </div>
-                        </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                           </div>
                     </div>
                   </div>
@@ -104,6 +69,7 @@
                             <th scope="col">Nama</th>
                             <th scope="col">Alamat</th>
                             <th scope="col">Jabatan</th>
+                            <th scope="col">No Kontak</th>
                             <th scope="col">Aksi</th>
                           </tr>
                         </thead>
@@ -114,8 +80,9 @@
                             <td>{{$item->nama}}</td>
                             <td>{{$item->alamat}}</td>
                             <td>{{$item->jabatan}}</td>
+                            <td>{{$item->no_kontak}}</td>
                             <td>
-                              <a href="#" class="btn btn-xs btn-primary" data-id="{{$item->id}}" data-bs-toggle="modal" data-bs-target="#edit"><i class="fa fa-edit"></i>Edit</a>
+                              <a href="{{route('karyawan.edit', $item->id)}}" class="btn btn-xs btn-primary" data-id="{{$item->id}}"><i class="fa fa-edit"></i>Edit</a>
                             </td>
                           </tr>   
                           @endforeach

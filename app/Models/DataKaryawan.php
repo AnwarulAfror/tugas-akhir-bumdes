@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class DataKaryawan extends Model
 {
     use HasFactory;
-    protected $fillable = ['no_karyawan', 'nama', 'alamat', 'jabatan'];
+    
+    protected $fillable = ['no_karyawan', 'nama', 'alamat', 'jabatan', 'no_kontak'];
+    
     public function DataKaryawan()
     {
         return $this->hasMany(DataKaryawan::class);

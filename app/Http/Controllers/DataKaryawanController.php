@@ -31,9 +31,11 @@ class DataKaryawanController extends Controller
     public function store(Request $request)
     {
         $data = DataKaryawan::create([
+            'no_karyawan' => uniqid(),
             'nama' => $request->nama,
             'alamat' => $request->alamat,
             'jabatan' => $request->jabatan,
+            'no_kontak' => $request->no_kontak,
         ]);
 
         if ($data)
@@ -53,17 +55,29 @@ class DataKaryawanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(DataKaryawan $dataKaryawan)
+    public function edit($id)
     {
-        //
+        $data = DataKaryawan::findOrFail($id);
+        
+        return view('karyawan.edit',compact('data') );
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, DataKaryawan $dataKaryawan)
+    public function update(Request $request, $id)
     {
-        //
+        $data = DataKaryawan::findOrFail ($id);
+        $data->nama = $request->nama;
+        $data->alamat = $request->alamat;
+        $data->jabatan = $request->jabatan;
+        $data->no_kontak = $request->no_kontak;
+        
+        $data->update();
+        
+        {
+            return redirect()->route('karyawan.index');
+        }
     }
 
     /**

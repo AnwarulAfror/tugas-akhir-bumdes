@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('data_karyawans', function (Blueprint $table) {
             $table->id();
+            $table->string('no_karyawan');
             $table->string('nama');
             $table->string('alamat');
-            $table->string('jabatan');
+            $table->enum('jabatan', ['ketua', 'bendahara', 'wakil_ketua'])->default('ketua');
+            $table->string('no_kontak')->nullable();
             $table->timestamps();
         });
     }

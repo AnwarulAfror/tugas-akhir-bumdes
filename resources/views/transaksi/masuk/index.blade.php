@@ -32,18 +32,18 @@
                         <div class="input-group mb-4">
                           <label for="inputDate" class="col-sm-3 col-form-label">Total Tagihan</label>
                           <span class="input-group-text">Rp</span>
-                          <input type="text" name="total_tagihan" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          <input type="text" name="total_tagihan" class="form-control" required aria-label="Amount (to the nearest dollar)">
                           <span class="input-group-text">.00</span>
                         </div><!-- End General Form Elements -->
                         <div class="input-group mb-4">
                           <label for="inputDate" class="col-sm-3 col-form-label">Jumlah Bayar</label>
                           <span class="input-group-text">Rp</span>
-                          <input type="text" name="nominal_bayar" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          <input type="text" name="nominal_bayar" class="form-control" required aria-label="Amount (to the nearest dollar)">
                           <span class="input-group-text">.00</span>
                         </div><!-- End General Form Elements -->
                         <div class="input-group mb-4">
                           <label for="inputDate" class="col-sm-3 col-form-label">Mitra</label>
-                          <select id="inputState" name="mitra_id" class="form-select">
+                          <select id="inputState" name="mitra_id" class="form-select" required>
                             <option selected>pilih...</option>
                             @foreach ($mitra as $item)
                             <option value="{{$item->id}}">{{$item->nama}}</option>   
@@ -52,7 +52,7 @@
                         </div>
                         <div class="input-group mb-4">
                           <label for="inputDate" class="col-sm-3 col-form-label">Produk</label>
-                          <select id="inputState" name="produk_id" class="form-select">
+                          <select id="inputState" name="produk_id" class="form-select" required>
                             <option selected>pilih...</option>
                             @foreach ($produk as $item)
                             <option value="{{$item->id}}">{{$item->nama_produk}}</option>   
@@ -69,56 +69,6 @@
                 </div>
               </form>
             </div>
-          <div class="modal fade" id="edit" tabindex="-1">
-            <form action="{{route('transaksi.store')}}" method="post">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                   <h5 class="modal-title">Edit Data</h5>
-                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <!-- Advanced Form Elements -->
-                  <div class="input-group mb-4">
-                    <label for="inputDate" class="col-sm-3 col-form-label">Total Tagihan</label>
-                    <span class="input-group-text">Rp</span>
-                    <input type="text" name="total_tagihan" id="total_tagihan" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-text">.00</span>
-                  </div><!-- End General Form Elements -->
-                  <div class="input-group mb-4">
-                    <label for="inputDate" class="col-sm-3 col-form-label">Jumlah Bayar</label>
-                    <span class="input-group-text">Rp</span>
-                    <input type="text" name="nominal_bayar" id="nominal_bayar" class="form-control" aria-label="Amount (to the nearest dollar)">
-                    <span class="input-group-text">.00</span>
-                  </div><!-- End General Form Elements -->
-                  <div class="input-group mb-4">
-                    <label for="inputDate" class="col-sm-3 col-form-label">Mitra</label>
-                    <select id="inputState" name="mitra_id" id="mitra_id" class="form-select">
-                      <option>pilih...</option>
-                      @foreach ($mitra as $item)
-                      <option value="{{$item->id}}">{{$item->nama}}</option>   
-                      @endforeach
-                    </select>
-                  </div>
-                  <div class="input-group mb-4">
-                    <label for="inputDate" class="col-sm-3 col-form-label">Produk</label>
-                    <select id="inputState" name="produk_id" id="produk_id" class="form-select">
-                      <option selected>pilih...</option>
-                      @foreach ($produk as $item)
-                      <option value="{{$item->id}}">{{$item->nama_produk}}</option>   
-                      @endforeach
-                    </select>
-                  </div>
-                  <input type="hidden" value="masuk" name="jenis_transaksi" id="jenis_transaksi">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                  <button type="submit" class="btn btn-primary">Simpan</button>
-                </div>
-              </div>
-            </div>
-            </form>
-          </div><!-- End Basic Modal-->
             <div class="row">
               <div class="col-lg-12">
       
@@ -153,7 +103,7 @@
                           <td>{{$item->jenis_transaksi}}</td>
                           <td>{{$item->status}}</td>
                           <td>
-                            <a href="#" class="btn btn-xs btn-primary" data-id="{{$item->id}}" data-bs-toggle="modal" data-bs-target="#edit"><i class="fa fa-edit"></i>Edit</a>
+                            <a href="{{route('transaksi.edit', $item->id)}}" class="btn btn-xs btn-primary" data-id="{{$item->id}}"><i class="fa fa-edit"></i>Edit</a>
                           </td>
                         </tr>
                         @endforeach

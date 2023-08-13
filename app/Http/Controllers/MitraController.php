@@ -56,9 +56,11 @@ class MitraController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Mitra $mitra)
+    public function edit($id)
     {
-        //
+        $data = Mitra::findOrFail($id);
+        
+        return view('mitra.edit', compact('data'));
     }
 
     /**
@@ -72,9 +74,10 @@ class MitraController extends Controller
         $data->alamat = $request->alamat;
         $data->no_kontak = $request->no_kontak;
         $data->jenis = $request->jenis;
-        $update = $data->update();
         
-        if ($update) {
+        $data->update();
+        
+        {
             return redirect()->route('mitra.index');
         }
 

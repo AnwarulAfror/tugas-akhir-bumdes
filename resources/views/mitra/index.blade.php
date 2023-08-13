@@ -22,21 +22,21 @@
                           <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Nama</label>
                             <div class="col-sm-9">
-                              <input type="text" name="nama" class="form-control">
+                              <input type="text" name="nama" class="form-control" required>
                             </div>
                           </div>
                           <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Alamat</label>
                             <div class="col-sm-9">
-                              <input type="text" name="alamat" class="form-control">
+                              <input type="text" name="alamat" class="form-control" required>
                             </div>
                           </div>
                           <!-- Advanced Form Elements -->
                           <!-- End General Form Elements -->
                           <div class="input-group mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Jenis Mitra</label>
-                            <select id="inputState" name="jenis" class="form-select">
-                              <option selected>Pilih...</option>
+                            <select id="inputState" name="jenis" class="form-select" required>
+                              <option selected>Pilih</option>
                               <option value="kelompok">Kelopok</option>
                               <option value="perorangan">Perorangan</option>
                             </select>
@@ -44,61 +44,13 @@
                           <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Kontak</label>
                             <div class="col-sm-9">
-                              <input type="text" name="no_kontak" class="form-control">
+                              <input type="text" name="no_kontak" class="form-control" required>
                             </div>
                           </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                           <button type="submit" class="btn btn-primary">Simpan Data</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal fade" id="edit" tabindex="-1">
-                  <form action="{{route('mitra.store')}}" method="post">
-                    @csrf
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title">Edit Data</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="row mb-3">
-                            <label for="inputDate" class="col-sm-3 col-form-label">Nama</label>
-                            <div class="col-sm-9">
-                              <input type="text" name="nama" id="nama" class="form-control">
-                            </div>
-                          </div>
-                          <div class="row mb-3">
-                            <label for="inputDate" class="col-sm-3 col-form-label">Alamat</label>
-                            <div class="col-sm-9">
-                              <input type="text" name="alamat" id="alamat" class="form-control">
-                            </div>
-                          </div>
-                          <!-- Advanced Form Elements -->
-                          <!-- End General Form Elements -->
-                          <div class="input-group mb-3">
-                            <label for="inputDate" class="col-sm-3 col-form-label">Jenis Mitra</label>
-                            <select id="inputState" name="jenis" id="select" class="form-select">
-                              <option>Pilih...</option>
-                              <option value="kelompok">Kelopok</option>
-                              <option value="perorangan">Perorangan</option>
-                            </select>
-                          </div>
-                          <div class="row mb-3">
-                            <label for="inputDate" class="col-sm-3 col-form-label">Kontak</label>
-                            <div class="col-sm-9">
-                              <input type="text" name="no_kontak" id="no_kontak" class="form-control">
-                            </div>
-                          </div>
-                        </div>
-                        <input type="hidden" name="id">
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                          <button type="button" id="update" class="btn btn-primary">Simpan Perubahan</button>
                         </div>
                       </div>
                     </div>
@@ -131,9 +83,7 @@
                             <td>{{$item->jenis}}</td>
                             <td>{{$item->no_kontak}}</td>
                             <td>
-                              <div class="form-group">
-                                <a href="javascript:void(0)" class="btn btn-xs btn-primary" id="btnEdit" data-id="{{$item->id}}" data-url="{{ route('mitra.show', $item->id)}}" data-bs-toggle="modal" data-bs-target="#edit"><i class="fa fa-edit"></i>Edit</a>
-                              </div>
+                                <a href="{{route('mitra.edit', $item->id)}}" class="btn btn-xs btn-primary" data-id="{{$item->id}}"><i class="fa fa-edit"></i>Edit</a>
                             </td>
                           </tr>
                           @endforeach

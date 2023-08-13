@@ -47,7 +47,7 @@
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           
           <li>
-            <a href="/karyawan/tables-data">
+            <a href="{{route('karyawan.index')}}">
               <i class="bi bi-circle"></i><span>Data Karyawan</span>
             </a>
           </li>
