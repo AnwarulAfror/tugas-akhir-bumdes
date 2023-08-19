@@ -35,6 +35,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [HomeController::class, 'index']);
     Route::get('/transaksi/pendapatan', [TransaksiController::class, 'index2'])->name('transaksi.masuk');
     Route::get('/transaksi/store', [TransaksiController::class, 'index2'])->name('transaksi.store');
+    Route::get('/transaksi{id}/edit', [TransaksiController::class, 'edit'])->name('transaksi.edit');
+    Route::put('/transaksi{id}', [TransaksiController::class, 'update'])->name('transaksi.update');
     Route::get('/transaksi/pengeluaran', [TransaksiController::class, 'index'])->name('transaksi.keluar');
     Route::post('/transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
     Route::get('/transaksi/{id}/edit', [TransaksiController::class, 'edit'])->name('transaksi.edit');

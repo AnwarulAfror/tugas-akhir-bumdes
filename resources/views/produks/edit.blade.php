@@ -21,19 +21,19 @@
                         <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Nama Produk</label>
                             <div class="col-sm-9">
-                            <input type="text" value="{{$data->nama_produk}}" name="nama_produk" class="form-control">
+                            <input type="text" value="{{$data->nama_produk}}" name="nama_produk" class="form-control" required>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Keterangan</label>
                             <div class="col-sm-9">
-                            <input type="text" value="{{$data->keterangan}}" name="keterangan" class="form-control">
+                            <input type="text" value="{{$data->keterangan}}" name="keterangan" class="form-control" required>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Keterangan</label>
                             <div class="col-sm-9">
-                            <select name="cara_bayar" class="form-control" id="">
+                            <select name="cara_bayar" class="form-control" required id="">
                                 <option value="langsung" {{$data->cara_bayar == 'langsung' ? 'selected' : ''}}>Lansung</option>
                                 <option value="angsuran" {{$data->cara_bayar == 'angsuran' ? 'selected' : ''}}>Angsuran</option>
                             </select>

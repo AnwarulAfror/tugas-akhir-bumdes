@@ -55,7 +55,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span> 2023/2024</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span> IST ANNUQAYAH 2023/2024</span></strong>. NGOPING TEAM
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
