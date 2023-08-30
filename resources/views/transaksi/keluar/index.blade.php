@@ -42,7 +42,7 @@
                     <div class="input-group mb-3">
                       <label for="inputDate" class="col-sm-3 col-form-label">Mitra</label>
                       <select id="inputState" name="mitra_id" class="form-select" required>
-                        <option selected>pilih...</option>
+                        <option value="">pilih...</option>
                         @foreach ($mitra as $item)
                         <option value="{{$item->id}}">{{$item->nama}}</option>   
                         @endforeach

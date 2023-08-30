@@ -9,11 +9,8 @@ class ProfilController extends Controller
 {
     public function index()
     {
-        return view ('profil.index');
-    }
-    public function index2()
-    {
-        return view ('profil.index');
+        $data = auth()->user();
+        return view ('profil.index', compact('data'));
     }
     
     /**

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->double('nominal_bayar');
             $table->string('keterangan')->nullable();
             $table->enum('jenis_transaksi', ['masuk', 'keluar']);
-            $table->enum('status', ['lunas', 'belum_unas']);
+            $table->enum('status', ['lunas', 'belum lunas']);
             $table->timestamps();
         });
     }

@@ -36,7 +36,7 @@
                           <div class="input-group mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Jenis Mitra</label>
                             <select id="inputState" name="jenis" class="form-select" required>
-                              <option selected>Pilih</option>
+                              <option value="">Pilih</option>
                               <option value="kelompok">Kelopok</option>
                               <option value="perorangan">Perorangan</option>
                             </select>
@@ -66,7 +66,7 @@
                       <table class="table datatable">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">No</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Alamat</th>
                             <th scope="col">Jenis</th>

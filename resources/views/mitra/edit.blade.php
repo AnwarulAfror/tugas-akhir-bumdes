@@ -21,13 +21,13 @@
                         <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Nama</label>
                             <div class="col-sm-9">
-                            <input type="text" value="{{$data->nama}}" name="nama" class="form-control">
+                            <input type="text" value="{{$data->nama}}" name="nama" class="form-control" required>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Alamat</label>
                             <div class="col-sm-9">
-                            <input type="text" value="{{$data->alamat}}" name="alamat" class="form-control">
+                            <input type="text" value="{{$data->alamat}}" name="alamat" class="form-control" required>
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -42,7 +42,7 @@
                         <div class="row mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Kontak</label>
                             <div class="col-sm-9">
-                            <input type="text" value="{{$data->no_kontak}}" name="no_kontak" class="form-control">
+                            <input type="text" value="{{$data->no_kontak}}" name="no_kontak" class="form-control" required>
                             </div>
                         </div>
                         <div class="row mb-3">

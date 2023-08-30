@@ -114,10 +114,20 @@ class TransaksiController extends Controller
         $data->nominal_bayar = $request->nominal_bayar;
         $data->mitra_id = $request->mitra_id;
         $data->keterangan = $request->keterangan;
+        $data->jenis_transaksi = $request->jenis_transaksi;
         
         $data->update();
         
-        return redirect()->route('transaksi.keluar');
+        if ($data)
+        {
+            if ($request->jenis_transaksi == 'masuk')
+            {
+                return redirect()->route('transaksi.masuk');
+            } else {
+                return redirect()->route('transaksi.keluar');
+                
+            }
+        }
     }
 
     /**

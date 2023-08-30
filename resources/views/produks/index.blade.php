@@ -34,7 +34,7 @@
                             <div class="input-group mb-2">
                               <label for="inputDate" class="col-sm-4 col-form-label">Jenis Pembayaran</label>
                                 <select id="inputState" name="cara_bayar" class="form-select" required>
-                                <option selected>Pilih</option>
+                                <option value="">Pilih</option>
                                 <option value="langsung">Langsung</option>
                                 <option value="angsuran">Angsuran</option>
                               </select>
@@ -58,7 +58,7 @@
                       <table class="table datatable">
                         <thead>
                           <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">No</th>
                             <th scope="col">Nama Produk</th>
                             <th scope="col">Keterangan</th>
                             <th scope="col">Jenis Pembayaran</th>

@@ -55,14 +55,14 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span> IST ANNUQAYAH 2023/2024</span></strong>. NGOPING TEAM
+      &copy; Copyright <strong><span> TA (TUGAS AKHIR) IST ANNUQAYAH 2023/2024</span></strong>. NGOPING TEAM
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Belajar Instalasi laravel <a href="https://www.youtube.com/watch?v=GzdOgHRoL3I&list=PLjlp3HcOqMCHJrkwV0bUzcpQSalSIBqSX">YouTube</a>
+      Belajar Instalasi Laravel di <a href="https://www.youtube.com/watch?v=GzdOgHRoL3I&list=PLjlp3HcOqMCHJrkwV0bUzcpQSalSIBqSX">YouTube</a>
     </div>
   </footer><!-- End Footer -->
 

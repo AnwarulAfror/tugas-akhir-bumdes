@@ -9,7 +9,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item">Transaksi</li>
-          <li class="breadcrumb-item active">Pemasukan</li>
+          <li class="breadcrumb-item active">Pendapatan</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -24,7 +24,7 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title">Tambah Data</h5>
+                      <h5 class="modal-title">Tambah Data Pendapatan</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                      <div class="modal-body">
@@ -44,7 +44,7 @@
                         <div class="input-group mb-4">
                           <label for="inputDate" class="col-sm-3 col-form-label">Mitra</label>
                           <select id="inputState" name="mitra_id" class="form-select" required>
-                            <option selected>pilih...</option>
+                            <option value="">pilih...</option>
                             @foreach ($mitra as $item)
                             <option value="{{$item->id}}">{{$item->nama}}</option>   
                             @endforeach
@@ -53,7 +53,7 @@
                         <div class="input-group mb-4">
                           <label for="inputDate" class="col-sm-3 col-form-label">Produk</label>
                           <select id="inputState" name="produk_id" class="form-select" required>
-                            <option selected>pilih...</option>
+                            <option value="">pilih...</option>
                             @foreach ($produk as $item)
                             <option value="{{$item->id}}">{{$item->nama_produk}}</option>   
                             @endforeach
@@ -74,19 +74,19 @@
       
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">Tambah Data Pemasukan</h5>
+                    <h5 class="card-title">Tambah Data Pendapatan</h5>
                     <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambah">
-                      Tambah Data Pemasukan
+                      Tambah Data Pendapatan
                     </button>
                     <!-- Table with stripped rows -->
                     <table class="table datatable">
                       <thead>
                         <tr>
-                          <th scope="col">#</th>
+                          <th scope="col">No</th>
                           <th scope="col">Mitra</th>
                           <th scope="col">Produk</th>
                           <th scope="col">Total Tagihan</th>
-                          <th scope="col">Nominal</th>
+                          <th scope="col">Total Bayar</th>
                           <th scope="col">Jenis</th>
                           <th scope="col">Status</th>
                           <th scope="col">Aksi</th>

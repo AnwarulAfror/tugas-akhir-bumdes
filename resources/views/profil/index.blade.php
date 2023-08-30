@@ -19,7 +19,7 @@
               <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
   
                 <img src="{{asset('assets/img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">
-                <h2>Anwarul Afror</h2>
+                <h2>{{ $data->name }}</h2>
                 <h3>Web Designer</h3>
               </div>
             </div>
@@ -79,11 +79,11 @@
                     <!-- Profile Edit Form -->
                     <form>
                       <div class="row mb-3">
-                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label"> Gambar Profil</label>
+                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label"> Foto Profil</label>
                         <div class="col-md-8 col-lg-9">
                           <img src="{{asset('assets/img/profile-img.jpg')}}" alt="Profile">
                           <div class="pt-2">
-                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
+                            <a href="input" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
                           </div>
                         </div>
                       </div>

@@ -22,6 +22,7 @@
                         <div class="input-group mb-3">
                           <label for="inputDate" class="col-sm-3 col-form-label">Total Tagihan</label>
                           <span class="input-group-text">Rp</span>
+                          <input type="hidden" value="{{$data->jenis_transaksi}}" name="jenis_transaksi" class="form-control">
                           <input type="text" value="{{$data->total_tagihan}}" name="total_tagihan" class="form-control" required aria-label="Amount (to the nearest dollar)">
                           <span class="input-group-text">.00</span>
                         </div><!-- End General Form Elements -->
@@ -34,7 +35,7 @@
                         <div class="input-group mb-3">
                             <label for="inputDate" class="col-sm-3 col-form-label">Mitra</label>
                             <select id="inputState" name="mitra_id" class="form-select" required>
-                              <option selected>pilih...</option>
+                              <option value="">pilih...</option>
                               @foreach ($mitra as $item)
                               <option value="{{$item->id}}"{{$item->id == $data->mitra_id ? 'selected': ''}}>{{$item->nama}}</option>   
                               @endforeach
