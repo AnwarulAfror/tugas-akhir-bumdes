@@ -91,6 +91,7 @@
                           <th scope="col">Status</th>
                           <th scope="col">Aksi</th>
                         </tr>
+                        
                       </thead>
                       <tbody>
                         @foreach ($data as $item)

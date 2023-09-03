@@ -21,7 +21,7 @@
           <div class="row">
 
             <!-- Sales Card -->
-            <div class="col-xxl-4 col-md-4">
+            <div class="col-xxl-6 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
                   <h5 class="card-title">Pendapatan</h5>
@@ -31,8 +31,7 @@
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>Rp.3,264</h6>
-                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">meningkatkan</span>
+                      <h6>Rp.{{$pemasukan}},-</h6>
                     </div>
                   </div>
                 </div>
@@ -40,7 +39,7 @@
             </div><!-- End Sales Card -->
 
             <!-- Revenue Card -->
-            <div class="col-xxl-4 col-md-4">
+            <div class="col-xxl-6 col-md-6">
               <div class="card info-card revenue-card">
                 <div class="card-body">
                   <h5 class="card-title">Penegeluaran</h5>
@@ -50,9 +49,7 @@
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>Rp.3,264</h6>
-                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">meningkatkan</span>
-
+                      <h6>Rp.{{$pengeluaran}},-</h6>
                     </div>
                   </div>
                 </div>
@@ -61,7 +58,7 @@
             </div><!-- End Revenue Card -->
 
             <!-- Customers Card -->
-            <div class="col-xxl-4 col-xl-4">
+            {{-- <div class="col-xxl-4 col-xl-4">
               <div class="card info-card customers-card">
 
                 <div class="card-body">
@@ -78,7 +75,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
             
         {{-- <div class="col-lg-12">
           <div class="card">
