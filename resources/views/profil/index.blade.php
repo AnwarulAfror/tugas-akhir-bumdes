@@ -20,7 +20,7 @@
   
                 <img src="{{asset('assets/img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">
                 <h2>{{ $data->name }}</h2>
-                <h3>Web Designer</h3>
+                <h3>{{$data->pekerjaan}}</h3>
               </div>
             </div>
   
@@ -54,22 +54,22 @@
   
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label ">Nama Lengakp</div>
-                      <div class="col-lg-9 col-md-8">Anwarul Afror</div>
+                      <div class="col-lg-9 col-md-8">{{$data->name}}</div>
                     </div>
   
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label">Pekerjaan</div>
-                      <div class="col-lg-9 col-md-8">Web Designer</div>
+                      <div class="col-lg-9 col-md-8">{{$data->pekerjaan}}</div>
                     </div>
   
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label">Alamat</div>
-                      <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                      <div class="col-lg-9 col-md-8">{{$data->alamat}}</div>
                     </div>
   
                     <div class="row">
                       <div class="col-lg-3 col-md-4 label">No. Telpon</div>
-                      <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                      <div class="col-lg-9 col-md-8">{{$data->no_telpon}}</div>
                     </div>
   
                   </div>
@@ -91,28 +91,28 @@
                       <div class="row mb-3">
                         <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama Lengkap</label>
                         <div class="col-md-8 col-lg-9">
-                          <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                          <input name="fullName" type="text" class="form-control" id="fullName" value="{{$data->name}}">
                         </div>
                       </div>
   
                       <div class="row mb-3">
                         <label for="Job" class="col-md-4 col-lg-3 col-form-label">Pekerjaan</label>
                         <div class="col-md-8 col-lg-9">
-                          <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
+                          <input name="job" type="text" class="form-control" id="Job" value="{{$data->pekerjaan}}">
                         </div>
                       </div>
   
                       <div class="row mb-3">
                         <label for="Address" class="col-md-4 col-lg-3 col-form-label">Alamat</label>
                         <div class="col-md-8 col-lg-9">
-                          <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
+                          <input name="address" type="text" class="form-control" id="Address" value="{{$data->alamat}}">
                         </div>
                       </div>
   
                       <div class="row mb-3">
                         <label for="Phone" class="col-md-4 col-lg-3 col-form-label">No. Telpon</label>
                         <div class="col-md-8 col-lg-9">
-                          <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                          <input name="phone" type="text" class="form-control" id="Phone" value="{{$data->no_telpon}}">
                         </div>
                       </div>
   

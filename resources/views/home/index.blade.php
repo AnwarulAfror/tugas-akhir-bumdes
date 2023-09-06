@@ -31,7 +31,7 @@
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>Rp.{{$pemasukan}},-</h6>
+                      <h6>Rp.{{$labaHasil}},-</h6>
                     </div>
                   </div>
                 </div>
@@ -49,7 +49,7 @@
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>Rp.{{$pengeluaran}},-</h6>
+                      <h6>Rp.{{$labaRugi}},-</h6>
                     </div>
                   </div>
                 </div>

@@ -26,7 +26,17 @@ class ProfilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = Profil::create([
+            'nama' => $request->nama,
+            'pekerjaan' => $request->pekerjaan,
+            'alamat' => $request->alamat,
+            'no_telpon' => $request->no_telpon,
+        ]);
+
+        if ($data)
+        {
+            return redirect()->route('profil.index');
+        }
     }
 
     /**

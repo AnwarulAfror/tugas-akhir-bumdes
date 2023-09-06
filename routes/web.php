@@ -45,7 +45,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/karyawan/store', [DataKaryawanController::class, 'store'])->name('karyawan.store');
     Route::get('/karyawan/{id}/edit', [DataKaryawanController::class, 'edit'])->name('karyawan.edit');
     Route::put('/karyawan/{id}', [DataKaryawanController::class, 'update'])->name('karyawan.update');
-    Route::get('/profil/users-profile', [ProfilController::class, 'index']);
+    Route::get('/profil/users-profile', [ProfilController::class, 'index'])->name('profil.index');
+    Route::post('/profil/users-profile', [ProfilController::class, 'store'])->name('profil.store');
     Route::get('/mitra', [MitraController::class, 'index'])->name('mitra.index');
     Route::post('/mitra', [MitraController::class, 'store'])->name('mitra.store');
     Route::get('/mitra/{id}', [MitraController::class, 'show'])->name('mitra.show');
