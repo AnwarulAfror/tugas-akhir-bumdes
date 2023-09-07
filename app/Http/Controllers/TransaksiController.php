@@ -101,7 +101,17 @@ class TransaksiController extends Controller
     {
         $data = Transaksi::findOrFail($id);
         $mitra = Mitra::all();
-        return view('transaksi.keluar.edit', compact(['data', 'mitra']));
+        $produk = Produk::all();
+        if ($data)
+        {
+            if ($data->jenis_transaksi == 'masuk')
+            {
+                return view('transaksi.masuk.edit', compact(['data', 'mitra','produk']));
+            } else {
+                return view('transaksi.keluar.edit', compact(['data', 'mitra','produk']));
+                
+            }
+        }
     }
 
     /**
