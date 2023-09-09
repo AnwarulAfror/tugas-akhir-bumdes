@@ -83,7 +83,7 @@
                         <div class="col-md-8 col-lg-9">
                           <img src="{{asset('assets/img/profile-img.jpg')}}" alt="Profile">
                           <div class="pt-2">
-                            <a href="input" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
+                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
                           </div>
                         </div>
                       </div>

@@ -19,6 +19,7 @@
                     @method('PUT')
                     <div class="card-body p-2">
                         <!-- Advanced Form Elements -->
+                        <input type="hidden" value="{{$data->jenis_transaksi}}" name="jenis_transaksi" class="form-control">
                         <div class="input-group mb-3">
                           <label for="inputDate" class="col-sm-3 col-form-label">Total Tagihan</label>
                           <span class="input-group-text">Rp</span>
@@ -45,7 +46,7 @@
                             <select id="inputState" name="produk_id" class="form-select" required>
                               <option value="">pilih...</option>
                               @foreach ($produk as $item)
-                              <option value="{{$item->id}}">{{$item->nama_produk ? 'selected': ''}}</option>   
+                              <option value="{{$item->id}}" {{$item->id == $data->produk_id ? 'selected': ''}}>{{$item->nama_produk}}</option>   
                               @endforeach
                             </select>
                         </div>

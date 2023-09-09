@@ -124,6 +124,7 @@ class TransaksiController extends Controller
         $data->total_tagihan = $request->total_tagihan;
         $data->nominal_bayar = $request->nominal_bayar;
         $data->mitra_id = $request->mitra_id;
+        $data->produk_id = $request->produk_id;
         $data->keterangan = $request->keterangan;
         $data->jenis_transaksi = $request->jenis_transaksi;
         
